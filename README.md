@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Minesweeper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simplified, interactive clone of the classic Minesweeper game built with React! Players can use logic to reveal safe cells and avoid hidden mines. Choose from different difficulty levels, save progress, and challenge yourself!
+
+## Features
+
+- **Difficulty Levels**: Easy, Medium, and Hard levels with varying grid sizes and mine counts.
+- **Safe First Click**: Ensures that the first click is always safe (contains no mine).
+- **Flagging Mines**: Right-click or Shift+Click to flag cells suspected to contain mines.
+- **Auto-clear**: Automatically clears adjacent cells when a cell with no adjacent mines is clicked.
+- **Progress Saving**: Automatically saves the game state, allowing players to resume from where they left off.
+- **Responsive Design**: Optimized for both mobile and desktop browsers.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Game Rules](#game-rules)
+- [Available Scripts](#available-scripts)
+- [Technologies Used](#technologies-used)
+- [Troubleshooting](#troubleshooting)
+
+## Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone git@github.com:JayChung0258/ChengChieh-Hung-project2.git
+   cd path_to_your_clone_project
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the application locally**:
+
+   ```bash
+   npm start
+   ```
+
+   This will start the development server on [http://localhost:3000](http://localhost:3000).
+
+## Usage
+
+1. **Difficulty Selection**: Choose from three difficulty levels:
+   - Easy (8x8 grid, 10 mines)
+   - Medium (16x16 grid, 40 mines)
+   - Hard (30x16 grid, 99 mines)
+
+2. **Game Actions**:
+   - **Left Click**: Reveal a cell.
+   - **Right Click or Shift+Click**: Flag a cell.
+   - **Reset Button**: Start a new game with randomized mines.
+
+3. **Game Status**:
+   - Win by revealing all safe cells.
+   - Lose by clicking on a mine, which reveals all mine locations.
+
+## Game Rules
+
+- The goal is to reveal all cells that don’t contain mines.
+- Each cell displays the number of adjacent mines.
+- Flag suspected mine cells to help you remember their location.
+- Revealing a mine will end the game in a loss.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- **`npm start`**: Runs the app in the development mode on [http://localhost:3000](http://localhost:3000).
+- **`npm run build`**: Builds the app for production in the `build` folder.
+- **`npm run serve`**: Serves the production build locally (requires `serve` package).
+- **`npm test`**: Launches the test runner in the interactive watch mode.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React**: Frontend JavaScript library for building user interfaces.
+- **React Router**: Manages routing within the app.
+- **Material-UI (optional)**: Used for styling components.
+- **LocalStorage**: Saves game progress so players can resume their game later.
