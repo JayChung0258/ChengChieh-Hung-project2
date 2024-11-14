@@ -101,9 +101,11 @@ const Game = () => {
             <Typography variant="h6">
                 Time: {gameState.time} seconds
             </Typography>
-            <Button variant="contained" color="primary" onClick={handleReset} style={{ margin: '10px' }}>
-                Reset
-            </Button>
+            <div>
+                <Button variant="contained" color="primary" onClick={handleReset} style={{ margin: '10px' }}>
+                    Reset
+                </Button>
+            </div>
             <div style={{ display: 'inline-block', marginTop: '20px' }}>{renderGrid()}</div>
         </Container>
     );
